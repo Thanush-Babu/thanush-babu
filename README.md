@@ -66,7 +66,7 @@
   <br>
 <hr/>
 <div align="center">
-<img  src="https://raw.githubusercontent.com/Thanush-Babu/thanush-babu/output/github-contribution-grid-snake.svg" alt="contribution graph" />
+<img  src="https://raw.githubusercontent.com/Thanush-Babu/thanush-babu/output/github-contribution-grid-snake.gif" alt="contribution graph" />
 </div>
 <hr/>
 
