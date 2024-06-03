@@ -22,10 +22,6 @@
      </a>
 </div>
 
- 
-
-
- 
 <img align="right" alt="Coding" width="400" src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif">
 
 # <img align="center" src="https://emojis.slackmojis.com/emojis/images/1584726375/8272/blob-cool.gif?1584726375" width="28" /> About Me:
@@ -34,7 +30,7 @@
 - <img src="https://github.com/SP-XD/SP-XD/blob/main/images/message.gif?raw=true" width="25" />&nbsp;&nbsp; Ask me about **Node.js, React, Express.js, MongoDB...** <br />
 :hearts: &emsp;I enjoy programming and sharing knowledge <br />
 :computer: &emsp;Most used line of code `console.log("I am Iron Man!")`
-<img alt="iron_man_gif" src="https://github.com/Thanush-Babu/thanush-babu/assets/139575349/e371f954-7007-4323-8fa9-3500bb007335"><br />
+<img alt="iron_man_gif" width="40px" src="https://github.com/Thanush-Babu/thanush-babu/assets/139575349/e371f954-7007-4323-8fa9-3500bb007335"><br />
 - <img src="https://github.com/SP-XD/SP-XD/blob/main/images/letterbox.gif?raw=true" width="25" /> &nbsp; How to reach me **thanushbabu2209@gmail.com**
 <div align="center">
 <h2 align="center">⚒️ Things I code with ⚒️</h2>
