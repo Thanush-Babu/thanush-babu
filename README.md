@@ -34,7 +34,7 @@
 - <img src="https://github.com/SP-XD/SP-XD/blob/main/images/message.gif?raw=true" width="25" />&nbsp;&nbsp; Ask me about **Node.js, React, Express.js, MongoDB...** <br />
 :hearts: &emsp;I enjoy programming and sharing knowledge <br />
 :computer: &emsp;Most used line of code `console.log("I am Iron Man!")`
-<img align="right" alt="Coding" width="40" src="https://github.com/Thanush-Babu/thanush-babu/assets/139575349/9252747f-88e7-4534-aab4-6a4770bf3cf2"> <br />
+<img align="left" alt="Coding" width="40" src="https://tenor.com/view/iron-man-gif-26484184"> <br />
 - <img src="https://github.com/SP-XD/SP-XD/blob/main/images/letterbox.gif?raw=true" width="25" /> &nbsp; How to reach me **thanushbabu2209@gmail.com**
 <div align="center">
 <h2 align="center">⚒️ Things I code with ⚒️</h2>
