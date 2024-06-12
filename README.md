@@ -30,7 +30,6 @@
 - <img src="https://github.com/SP-XD/SP-XD/blob/main/images/message.gif?raw=true" width="25" />&nbsp; Ask me about **Node.js, React, Express.js, MongoDB...** <br />
 - &nbsp; :hearts: &emsp;I enjoy programming and sharing knowledge <br />
 - &nbsp; :computer: &emsp;Most used line of code `console.log("I am Iron Man!")`
-- <img alt="iron_man_gif" width="30px" src="https://github.com/Thanush-Babu/thanush-babu/assets/139575349/e371f954-7007-4323-8fa9-3500bb007335"><br />
 - <img src="https://github.com/SP-XD/SP-XD/blob/main/images/letterbox.gif?raw=true" width="25" /> &nbsp; How to reach me **thanushbabu2209@gmail.com**
 <div align="center">
 <h2 align="center">⚒️ Things I code with ⚒️</h2>
