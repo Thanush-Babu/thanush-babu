@@ -1,6 +1,20 @@
-
-
-
+<style>
+        .board {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-gap: 5px;
+        }
+        .cell {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+</style>
 
 <h1 align="center">
     <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hi+There!+👋;+I'm+Thanush!;" />
@@ -64,7 +78,102 @@
   <br>
 <hr/>
 <div align="center">
-<img  src="https://raw.githubusercontent.com/Thanush-Babu/thanush-babu/output/github-contribution-grid-snake.gif" alt="contribution graph" />
+<!-- <img  src="https://raw.githubusercontent.com/Thanush-Babu/thanush-babu/output/github-contribution-grid-snake.gif" alt="contribution graph" /> -->
+    <div id="game">
+        <div class="board" id="board">
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+        </div>
+        <button id="restartButton" style="margin-top: 20px;">Restart Game</button>
+        <p id="message" style="margin-top: 20px;"></p>
+    </div>
+
+    <script>
+        const cells = document.querySelectorAll('[data-cell]');
+        const board = document.getElementById('board');
+        const restartButton = document.getElementById('restartButton');
+        const messageElement = document.getElementById('message');
+        let currentPlayer = 'X';
+        let boardState = Array(9).fill(null);
+
+        const winningCombinations = [
+            [0, 1, 2],
+            [3, 4, 5],
+            [6, 7, 8],
+            [0, 3, 6],
+            [1, 4, 7],
+            [2, 5, 8],
+            [0, 4, 8],
+            [2, 4, 6]
+        ];
+
+        cells.forEach(cell => {
+            cell.addEventListener('click', handleClick, { once: true });
+        });
+
+        restartButton.addEventListener('click', restartGame);
+
+        function handleClick(e) {
+            const cell = e.target;
+            const cellIndex = Array.from(cells).indexOf(cell);
+            if (boardState[cellIndex]) return;
+            placeMark(cell, currentPlayer);
+            if (checkWin(currentPlayer)) {
+                endGame(false);
+            } else if (isDraw()) {
+                endGame(true);
+            } else {
+                switchPlayer();
+            }
+        }
+
+        function placeMark(cell, player) {
+            cell.textContent = player;
+            boardState[Array.from(cells).indexOf(cell)] = player;
+        }
+
+        function switchPlayer() {
+            currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+        }
+
+        function checkWin(player) {
+            return winningCombinations.some(combination => {
+                return combination.every(index => {
+                    return boardState[index] === player;
+                });
+            });
+        }
+
+        function isDraw() {
+            return boardState.every(cell => cell);
+        }
+
+        function endGame(draw) {
+            if (draw) {
+                messageElement.textContent = "It's a draw!";
+            } else {
+                messageElement.textContent = `Player ${currentPlayer} wins!`;
+            }
+            cells.forEach(cell => cell.removeEventListener('click', handleClick));
+        }
+
+        function restartGame() {
+            currentPlayer = 'X';
+            boardState = Array(9).fill(null);
+            cells.forEach(cell => {
+                cell.textContent = '';
+                cell.addEventListener('click', handleClick, { once: true });
+            });
+            messageElement.textContent = '';
+        }
+    </script>
 </div>
 <hr/>
 
