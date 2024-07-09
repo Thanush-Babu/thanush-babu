@@ -110,7 +110,6 @@
         const messageElement = document.getElementById('message');
         let currentPlayer = 'X';
         let boardState = Array(9).fill(null);
-
         const winningCombinations = [
             [0, 1, 2],
             [3, 4, 5],
@@ -121,13 +120,10 @@
             [0, 4, 8],
             [2, 4, 6]
         ];
-
         cells.forEach(cell => {
             cell.addEventListener('click', handleClick, { once: true });
         });
-
         restartButton.addEventListener('click', restartGame);
-
         function handleClick(e) {
             const cell = e.target;
             const cellIndex = Array.from(cells).indexOf(cell);
@@ -141,16 +137,13 @@
                 switchPlayer();
             }
         }
-
         function placeMark(cell, player) {
             cell.textContent = player;
             boardState[Array.from(cells).indexOf(cell)] = player;
         }
-
         function switchPlayer() {
             currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
         }
-
         function checkWin(player) {
             return winningCombinations.some(combination => {
                 return combination.every(index => {
@@ -158,11 +151,9 @@
                 });
             });
         }
-
         function isDraw() {
             return boardState.every(cell => cell);
         }
-
         function endGame(draw) {
             if (draw) {
                 messageElement.textContent = "It's a draw!";
@@ -171,7 +162,6 @@
             }
             cells.forEach(cell => cell.removeEventListener('click', handleClick));
         }
-
         function restartGame() {
             currentPlayer = 'X';
             boardState = Array(9).fill(null);
